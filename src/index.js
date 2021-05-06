@@ -82,7 +82,7 @@ export default GiphyModal = forwardRef((props, ref) => {
       <GiphyItem
         onPress={() => {
           onSelectGif(item)
-          bottomSheetModalRef.current.close()
+          bottomSheetRef.current.close()
         }}
         item={item}
       />
@@ -103,6 +103,7 @@ export default GiphyModal = forwardRef((props, ref) => {
     return (
       <BottomSheetFlatList
         data={data}
+        numColumns={2}
         renderItem={renderItem}
         renderSectionHeader={renderHeader}
         onEndReachedThreshold={0.9}
