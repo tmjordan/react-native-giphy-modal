@@ -31,7 +31,7 @@ export default GiphyModal = forwardRef((props, ref) => {
   const [searchText, setSearchText] = useState('')
   const [selfShow, setSelfShow] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const snapPoints = useMemo(() => [0, '90%'], [])
+  const snapPoints = useMemo(() => [0, '50%', '90%'], [])
   const debouncedSearchText = useDebounce(searchText, 1000)
 
   useImperativeHandle(ref, () => ({
