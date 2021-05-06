@@ -11,7 +11,7 @@ import { View, ActivityIndicator,
 import {
     FlatList as GHFlatList
 } from 'react-native-gesture-handler';
-import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet'
+import BottomSheet, { BottomSheetFlatList as GBottomSheetFlatList } from '@gorhom/bottom-sheet'
 import { InputSearch, GiphyItem } from './components'
 import { useDebounce, useTrending, useSearch } from './utilities'
 
