@@ -48,8 +48,8 @@ const LoadingImage = ({url, width, height}) => {
         onLoadStart={() => setIsLoading(true)}
         style={[
           {
-            width: width,
-            height: height,
+            width: width/2,
+            height: height/2,
           },
           styles.loadedImage,
         ]}
