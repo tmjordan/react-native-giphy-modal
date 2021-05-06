@@ -6,10 +6,20 @@ import React, {
   useImperativeHandle,
   useCallback,
 } from 'react'
-import { View, ActivityIndicator } from 'react-native'
+import { View, ActivityIndicator, 
+    FlatList as RNFlatList} from 'react-native'
+import {
+    FlatList as GHFlatList
+} from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetFlatList } from '@gorhom/bottom-sheet'
 import { InputSearch, GiphyItem } from './components'
 import { useDebounce, useTrending, useSearch } from './utilities'
+
+
+const BottomSheetFlatList = Platform.select({
+    ios: GHFlatList,
+    android: GHFlatList,
+});
 
 export default GiphyModal = forwardRef((props, ref) => {
   const { giphyApiKey, onSelectGif } = props
